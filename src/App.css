@@ -1,0 +1,32 @@
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+    gap: 2rem;
+}
+
+.project-card {
+    background: #1c1c1c;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.technologies span {
+    background: #292929;
+    padding: 0.35rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
