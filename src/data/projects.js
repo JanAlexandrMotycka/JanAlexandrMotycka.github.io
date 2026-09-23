@@ -7,7 +7,7 @@ export const projects = [
         technologies: ["Unity", "C#"],
         description:
             "Idle blacksmith game independently developed and published on Steam.",
-        steamUrl: "#",
+        steamUrl: "https://store.steampowered.com/app/4420910/Clicksmith/?snr=1_7_7_230_150_1",
         image: "/images/HeaderCapsuleClicksmith.png",
 
         content: [
@@ -44,8 +44,8 @@ export const projects = [
         technologies: ["Unity", "C#"],
         description:
             "Physics-based roguelike developed independently in Unity.",
-        steamUrl: "#",
-        image: "/images/wreckingball.jpg",
+        steamUrl: "https://store.steampowered.com/app/4860390/WreckingBall/",
+        image: "/images/HeaderCapsuleWreckingBall.png",
 
         content: [
             {
@@ -81,8 +81,8 @@ export const projects = [
         technologies: ["Unity", "C#"],
         description:
             "Space shop-management game built around gathering, crafting and selling.",
-        steamUrl: "#",
-        image: "/images/cosmos-industry.jpg",
+        steamUrl: "https://store.steampowered.com/app/3330510/Cosmos_Industry/",
+        image: "/images/HeaderCapsuleCosmosIndustry.jpg",
 
         content: [
             {

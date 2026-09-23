@@ -13,6 +13,7 @@ export const school = [
       "MongoDB",
       "SQL"
     ],
+    image: "/images/UUN_Erb_clr1_RGB_EN.png",
 
     subtitle: "Bachelor's degree in Software Development",
     description: `
