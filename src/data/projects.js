@@ -2,6 +2,7 @@ export const projects = [
     {
         id: 1,
         title: "Clicksmith",
+        slug: "clicksmith",
         type: "Game",
         technologies: ["Unity", "C#"],
         description:
@@ -13,6 +14,7 @@ export const projects = [
     {
         id: 2,
         title: "WreckingBall",
+        slug: "wreckingball",
         type: "Game",
         technologies: ["Unity", "C#"],
         description:
@@ -24,6 +26,7 @@ export const projects = [
     {
         id: 3,
         title: "Cosmo's Industry",
+        slug: "cosmos-industry",
         type: "Game",
         technologies: ["Unity", "C#"],
         description:

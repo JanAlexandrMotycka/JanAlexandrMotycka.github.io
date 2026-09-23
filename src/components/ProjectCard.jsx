@@ -1,6 +1,8 @@
+import './ProjectCard.css';
+
 function ProjectCard({ project }) {
     return (
-        <article className="project-card">
+        <article className="project-card" id={project.slug}>
 
             <img
                 src={project.image}

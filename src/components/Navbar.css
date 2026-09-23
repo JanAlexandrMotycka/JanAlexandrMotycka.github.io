@@ -1,0 +1,187 @@
+.navbar {
+  position: sticky;
+  top: 50vh;
+  transform: translateY(-50%);
+
+  align-self: start;
+  height: fit-content;
+
+  width: 100%;
+  max-width: 220px;
+
+  padding: clamp(1rem, 2vw, 1.5rem);
+
+  border-left: 1px solid #333;
+}
+
+.navbar > ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(0.75rem, 1.5vh, 1.25rem);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar a {
+  display: block;
+
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  line-height: 1.4;
+}
+
+
+/* ---------- Dropdown header ---------- */
+
+.navbar summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  cursor: pointer;
+  list-style: none;
+}
+
+/* Remove browser default arrows */
+.navbar summary::-webkit-details-marker {
+  display: none;
+}
+
+.navbar summary::marker {
+  content: "";
+}
+
+/* Our own arrow */
+.navbar summary::before {
+  content: "▶";
+
+  font-size: 0.7rem;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* Rotate arrow when opened */
+.navbar details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+
+/* ---------- Subcategories ---------- */
+
+.navbar details > ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  padding-left: 1.5rem;
+
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+
+/* Run every time the dropdown opens */
+.navbar details[open] > ul {
+  animation: submenu-open 0.3s ease;
+}
+
+
+@keyframes submenu-open {
+  from {
+    opacity: 0;
+    transform: translateX(-0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ---------- Subcategories ---------- */
+
+.navbar details > ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  padding-left: 1.25rem;
+  margin: 0;
+
+  opacity: 0;
+  transform: translateY(-0.4rem);
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    margin-top 0.35s ease;
+}
+
+
+/* When details is opened */
+.navbar details[open] > ul {
+  max-height: 300px;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  margin-top: 0.6rem;
+}
+
+
+/* Slightly smaller / quieter submenu links */
+.navbar details > ul a {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .navbar {
+    position: static;
+
+    top: auto;
+    transform: none;
+
+    max-width: none;
+
+    padding: 1rem 0;
+
+    border-left: none;
+    border-bottom: 1px solid #333;
+  }
+
+  .navbar > ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+  }
+
+  .navbar details > ul {
+    padding-left: 1rem;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar details > ul {
+    transition: none;
+  }
+}

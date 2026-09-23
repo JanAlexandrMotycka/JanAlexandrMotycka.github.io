@@ -1,6 +1,8 @@
-import projects from '../data/projects';
-import school from '../data/school';
-import work from '../data/work';
+import './Skills.css';
+
+import { projects } from '../data/projects';
+import { school } from '../data/school';
+import { work } from '../data/work';
 
 function Skills() {
     const technologies = [

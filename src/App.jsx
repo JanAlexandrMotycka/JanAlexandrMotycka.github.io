@@ -8,16 +8,19 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 
 function App() {
-    return (
-        <main>
-            <Hero />
-            <Navbar />
-            <Experience />
-            <Projects />
-            <Skills />  
-            <Contact />
-        </main>
-    );
+  return (
+    <div className="app-layout">
+      <main className="main-content">
+        <Hero />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
