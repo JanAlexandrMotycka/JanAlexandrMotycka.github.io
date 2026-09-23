@@ -29,100 +29,32 @@
   list-style: none;
 }
 
-.navbar a {
-  display: block;
-
-  font-size: clamp(0.9rem, 1vw, 1rem);
-  line-height: 1.4;
+.navbar a,
+.navbar button {
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
 }
 
+.navbar button {
+  padding: 0;
 
-/* ---------- Dropdown header ---------- */
-
-.navbar summary {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  border: none;
+  background: none;
 
   cursor: pointer;
-  list-style: none;
 }
 
-/* Remove browser default arrows */
-.navbar summary::-webkit-details-marker {
-  display: none;
-}
+.nav-submenu {
+  max-height: 0;
 
-.navbar summary::marker {
-  content: "";
-}
-
-/* Our own arrow */
-.navbar summary::before {
-  content: "▶";
-
-  font-size: 0.7rem;
-
-  transition: transform 0.25s ease;
-}
-
-
-/* Rotate arrow when opened */
-.navbar details[open] > summary::before {
-  transform: rotate(90deg);
-}
-
-
-/* ---------- Subcategories ---------- */
-
-.navbar details > ul {
-  display: flex;
-  flex-direction: column;
-
-  gap: 0.5rem;
-
-  padding-left: 1.5rem;
-
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-}
-
-
-/* Run every time the dropdown opens */
-.navbar details[open] > ul {
-  animation: submenu-open 0.3s ease;
-}
-
-
-@keyframes submenu-open {
-  from {
-    opacity: 0;
-    transform: translateX(-0.5rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
-/* ---------- Subcategories ---------- */
-
-.navbar details > ul {
-  display: flex;
-  flex-direction: column;
-
-  gap: 0.5rem;
-
-  padding-left: 1.25rem;
   margin: 0;
+  padding-left: 1.75rem;
 
   opacity: 0;
-  transform: translateY(-0.4rem);
-
-  max-height: 0;
   overflow: hidden;
+
+  transform: translateX(-0.5rem);
 
   transition:
     max-height 0.35s ease,
@@ -131,26 +63,15 @@
     margin-top 0.35s ease;
 }
 
-
-/* When details is opened */
-.navbar details[open] > ul {
+.nav-submenu.open {
   max-height: 300px;
 
+  margin-top: 0.5rem;
+
   opacity: 1;
-  transform: translateY(0);
 
-  margin-top: 0.6rem;
+  transform: translateX(0);
 }
-
-
-/* Slightly smaller / quieter submenu links */
-.navbar details > ul a {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-
-/* ---------- Responsive ---------- */
 
 @media (max-width: 900px) {
   .navbar {
@@ -174,14 +95,7 @@
     gap: 1rem;
   }
 
-  .navbar details > ul {
+  .nav-submenu {
     padding-left: 1rem;
-  }
-}
-
-
-@media (prefers-reduced-motion: reduce) {
-  .navbar details > ul {
-    transition: none;
   }
 }

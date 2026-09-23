@@ -1,0 +1,19 @@
+.project-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  margin-top: 0;
+
+  transition:
+    max-height 0.5s ease,
+    opacity 0.3s ease,
+    margin-top 0.5s ease;
+}
+
+.project-content.open {
+  max-height: 3000px;
+  opacity: 1;
+
+  margin-top: 1.5rem;
+}
