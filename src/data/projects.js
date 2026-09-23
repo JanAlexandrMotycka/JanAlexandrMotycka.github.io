@@ -8,7 +8,7 @@ export const projects = [
         description:
             "Idle blacksmith game independently developed and published on Steam.",
         steamUrl: "#",
-        image: "/images/clicksmith.jpg",
+        image: "/images/HeaderCapsuleClicksmith.png",
 
         content: [
             {

@@ -8,7 +8,10 @@ function Experience() {
     return (
         <section>
             <h2 id="school">Education</h2>
-                 <p>School</p>
+                {school.map(school => (
+                    <ExperienceCard key={school.id} job={school} />
+                ))}
+                 
             <h2 id="Experience">Work Experience</h2>
                 {work.map(job => (
                     <ExperienceCard key={job.id} job={job} />

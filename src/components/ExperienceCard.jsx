@@ -10,7 +10,12 @@ function ExperienceCard({ job }) {
             />
 
             <h3>{job.title}</h3>
+            
+            <h4 className="subtitle">{job.subtitle}</h4>
 
+            <p className="description">{job.description}</p>
+
+            <h4>Used technologies:</h4>
             <div className="technologies">
                 {job.technologies.map(technology => (
                     <span key={technology}>
@@ -19,7 +24,6 @@ function ExperienceCard({ job }) {
                 ))}
             </div>
 
-            <p>{job.description}</p>
 
         </article>
     );

@@ -17,3 +17,26 @@
 
   margin-top: 1.5rem;
 }
+
+.project-summary {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(250px, 420px);
+
+  gap: 2rem;
+
+  align-items: center;
+}
+
+.project-summary-text {
+  min-width: 0;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+
+  border-radius: 0.5rem;
+}

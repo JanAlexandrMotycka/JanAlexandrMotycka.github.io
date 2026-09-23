@@ -9,30 +9,29 @@ function ProjectCard({ project }) {
     return (
         <article className="project-card" id={project.slug}>
 
-            <img
-                src={project.image}
-                alt={`${project.title} screenshot`}
-            />
+            <div className="project-summary">
+                <div className="project-summary-text">
+                <h3>{project.title}</h3>
 
-            <h3>{project.title}</h3>
+                <p>{project.description}</p>
 
-            <div className="technologies">
-                {project.technologies.map(technology => (
+                <h4>Technologies used:</h4>
+
+                <div className="technologies">
+                    {project.technologies.map(technology => (
                     <span key={technology}>
                         {technology}
                     </span>
-                ))}
+                    ))}
+                </div>
+                </div>
+
+                <img
+                className="project-image"
+                src={project.image}
+                alt={`${project.title} screenshot`}
+                />
             </div>
-
-            <p>{project.description}</p>
-
-            <a
-                href={project.steamUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View on Steam
-            </a>
 
             <button onClick={() => setOpen(!open)}>
                 {open ? 'Hide project' : 'View project'}

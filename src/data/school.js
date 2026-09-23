@@ -1,10 +1,30 @@
 export const school = [
-    {
-        id: 1,
-        title: "Unicorn University",
-        type: "College",
-        technologies: ["Unity", "C#"],
-        description:
-            "Idle blacksmith game independently developed and published on Steam."
-    }
+  {
+    id: 1,
+    title: "Unicorn University",
+    type: "College",
+    technologies: [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "SQL"
+    ],
+
+    subtitle: "Bachelor's degree in Software Development",
+    description: `
+I completed a Bachelor’s degree in Software Development at Unicorn University.
+
+\tMain areas covered:
+\t• Software architecture
+\t• Object-oriented design
+\t• Web development
+\t• Databases
+\t• REST APIs
+\t• Cloud applications
+`
+}
 ];
