@@ -5,7 +5,7 @@ function Hero() {
     <section id="hero">
       <h1>Jan Alexandr Motyčka</h1>
 
-      <h2>C# / Unity / Software Developer</h2>
+      <h2>C# / Unity / Full-Stack / Software Developer</h2>
 
       <p>
         Software Development graduate focused on C#, Unity,
@@ -13,7 +13,6 @@ function Hero() {
       </p>
 
       <div className="hero-actions">
-        <a href="#projects">View Projects</a>
         <a href="/CV_Motycka.pdf" download>Download CV</a>
       </div>
     </section>
