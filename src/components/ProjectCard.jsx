@@ -58,6 +58,22 @@ function ProjectCard({ project }) {
               />
             );
           }
+
+            if (block.type === 'imageText') {
+            return (
+                <div key={index} className="project-image-text">
+                <img
+                    src={block.src}
+                    alt={block.alt}
+                />
+
+                <div className="project-image-description">
+                    {block.title && <h4>{block.title}</h4>}
+                    <p>{block.text}</p>
+                </div>
+                </div>
+            );
+            }
         })}
 
         <a

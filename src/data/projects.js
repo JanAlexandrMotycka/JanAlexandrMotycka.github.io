@@ -11,28 +11,39 @@ export const projects = [
         image: "/images/HeaderCapsuleClicksmith.png",
 
         content: [
-            {
-                type: "text",
-                text: "Clicksmith is an idle blacksmith game focused on forging weapons, progression and upgrading the workshop."
-            },
-            {
-                type: "image",
-                src: "/images/clicksmith-forging.jpg",
-                alt: "Clicksmith forging screen"
-            },
-            {
-                type: "heading",
-                text: "Development"
-            },
-            {
-                type: "text",
-                text: "I developed the game independently in Unity using C#. The project includes progression systems, rarity systems, customers, upgrades and save data."
-            },
-            {
-                type: "image",
-                src: "/images/clicksmith-upgrades.jpg",
-                alt: "Clicksmith upgrade system"
-            }
+        {
+            type: "text",
+            text: "Clicksmith is an idle blacksmith game focused on forging weapons, progression and upgrading the workshop."
+        },
+        {
+            type: "imageText",
+            src: "/images/ClicksmithSmithingSystem.png",
+            alt: "Clicksmith forging screen",
+            title: "Forging System",
+            text: "The forging system is the core of the game. Players use gathered materials to create weapons, with their results influenced by progression and rarity systems."
+        },
+        {
+            type: "heading",
+            text: "Development"
+        },
+        {
+            type: "text",
+            text: "I developed the game independently in Unity using C#. The project includes progression systems, rarity systems, customers, upgrades and save data."
+        },
+        {
+            type: "imageText",
+            src: "/images/ClicksmithUpgradeSystem.png",
+            alt: "Clicksmith upgrade system",
+            title: "Upgrade System",
+            text: "The upgrade interface allows players to improve production, material limits, customer speed and other progression-related statistics."
+        },
+        {
+            type: "imageText",
+            src: "/images/ClicksmithWeaponStorage.png",
+            alt: "Clicksmith upgrade system",
+            title: "Upgrade System",
+            text: "The upgrade interface allows players to improve production, material limits, customer speed and other progression-related statistics."
+        }
         ]
     },
 
@@ -53,9 +64,11 @@ export const projects = [
                 text: "Clicksmith is an idle blacksmith game focused on forging weapons, progression and upgrading the workshop."
             },
             {
-                type: "image",
-                src: "/images/clicksmith-forging.jpg",
-                alt: "Clicksmith forging screen"
+                type: "imageText",
+                src: "/images/WreckingBallGameplay.png",
+                alt: "Wrecking Ball gameplay",
+                title: "Gameplay",
+                text: "The gameplay is centered around a physics-based roguelike experience where players must navigate through procedurally generated levels."
             },
             {
                 type: "heading",
@@ -66,9 +79,11 @@ export const projects = [
                 text: "I developed the game independently in Unity using C#. The project includes progression systems, rarity systems, customers, upgrades and save data."
             },
             {
-                type: "image",
-                src: "/images/clicksmith-upgrades.jpg",
-                alt: "Clicksmith upgrade system"
+                type: "imageText",
+                src: "/images/WreckingBallSelectionScreen.png",
+                alt: "Wrecking Ball selection screen",
+                title: "Selection Screen",
+                text: "The selection screen allows players to choose their character and customize their starting attributes."
             }
         ]
     },
@@ -85,28 +100,39 @@ export const projects = [
         image: "/images/HeaderCapsuleCosmosIndustry.jpg",
 
         content: [
-            {
-                type: "text",
-                text: "Clicksmith is an idle blacksmith game focused on forging weapons, progression and upgrading the workshop."
-            },
-            {
-                type: "image",
-                src: "/images/clicksmith-forging.jpg",
-                alt: "Clicksmith forging screen"
-            },
-            {
-                type: "heading",
-                text: "Development"
-            },
-            {
-                type: "text",
-                text: "I developed the game independently in Unity using C#. The project includes progression systems, rarity systems, customers, upgrades and save data."
-            },
-            {
-                type: "image",
-                src: "/images/clicksmith-upgrades.jpg",
-                alt: "Clicksmith upgrade system"
-            }
+        {
+            type: "text",
+            text: "Clicksmith is an idle blacksmith game focused on forging weapons, progression and upgrading the workshop."
+        },
+        {
+            type: "imageText",
+            src: "/images/CosmosIndustrySelling.png",
+            alt: "Cosmos Industry selling screen",
+            title: "Selling System",
+            text: "The selling system allows players to manage their inventory and resources effectively."
+        },
+        {
+            type: "heading",
+            text: "Development"
+        },
+        {
+            type: "text",
+            text: "I developed the game independently in Unity using C#. The project includes progression systems, rarity systems, customers, upgrades and save data."
+        },
+        {
+            type: "imageText",
+            src: "/images/CosmosIndustryMinigames.png",
+            alt: "Cosmos Industry minigames",
+            title: "Minigames",
+            text: "The game features a variety of minigames that provide additional challenges and rewards for players."
+        },
+        {
+            type: "imageText",
+            src: "/images/CosmosIndustryStorage.png",
+            alt: "Cosmos Industry storage",
+            title: "Storage System",
+            text: "The storage system allows players to manage their inventory and resources effectively."
+        }
         ]
     }
 ];
