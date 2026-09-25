@@ -38,7 +38,6 @@ function ProjectCard({ project }) {
             </button>
 
             <div className={`project-content ${open ? 'open' : ''}`}>
-                <p>{project.description}</p>
 
                 {project.content.map((block, index) => {
                     if (block.type === 'text') {
