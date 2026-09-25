@@ -13,7 +13,7 @@ function Hero() {
       </p>
 
       <div className="hero-actions">
-        <a href="/CV_Motycka.pdf" download>Download CV</a>
+        <a href="/images/Jan_Alexandr_Motycka_CV_CSharp_DotNet.pdf" download>Download CV</a>
       </div>
     </section>
   );
