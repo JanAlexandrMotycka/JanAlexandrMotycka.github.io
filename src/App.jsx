@@ -6,12 +6,14 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import Education from './components/Education';
 
 function App() {
   return (
     <div className="app-layout">
       <main className="main-content">
         <Hero />
+        <Education />
         <Experience />
         <Projects />
         <Skills />

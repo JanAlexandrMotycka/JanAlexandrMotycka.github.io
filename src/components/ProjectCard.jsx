@@ -74,15 +74,35 @@ function ProjectCard({ project }) {
                 </div>
             );
             }
+
+            if (block.type === 'code') {
+                return (
+                    <div key={index} className="project-code-section">
+
+                        <div className="project-code-text">
+                            {block.title && <h4>{block.title}</h4>}
+                            {block.text && <p>{block.text}</p>}
+                        </div>
+
+                        <pre className="code-block">
+                            <code>{block.code}</code>
+                        </pre>
+
+                    </div>
+                );
+            }
         })}
 
+        {project.steamUrl && (
         <a
-          href={project.steamUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+            className="steam-button"
+            href={project.steamUrl}
+            target="_blank"
+            rel="noopener noreferrer"
         >
-          View on Steam
+            View on Steam
         </a>
+        )}
       </div>
 
         </article>

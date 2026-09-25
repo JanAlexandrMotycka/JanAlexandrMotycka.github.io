@@ -1,20 +1,39 @@
 .app-layout {
   display: grid;
 
+  /*
+    Main content stays flexible,
+    navbar gets a wider dedicated column.
+  */
   grid-template-columns:
     minmax(0, 1fr)
-    minmax(180px, 220px);
+    360px;
 
-  gap: clamp(3rem, 7vw, 7rem);
+  gap: clamp(3rem, 5vw, 6rem);
 
   width: 100%;
-  max-width: 1500px;
 
+  /*
+    Wider than before so the navbar can occupy
+    unused space on the right.
+  */
+  max-width: 1800px;
+
+  /*
+    Keep the layout centered overall.
+    The main content itself is limited below,
+    so most additional width is effectively
+    available on the right.
+  */
   margin: 0 auto;
+
   padding:
     clamp(2rem, 5vw, 5rem)
-    clamp(1.5rem, 5vw, 4rem);
+    clamp(1.5rem, 4vw, 4rem);
 }
+
+
+/* ---------------- Main content ---------------- */
 
 .main-content {
   display: flex;
@@ -22,8 +41,19 @@
 
   gap: clamp(6rem, 12vh, 10rem);
 
+  width: 100%;
+
+  /*
+    Prevent the content from becoming wider
+    just because the page has more available space.
+  */
+  max-width: 1100px;
+
   min-width: 0;
+
+  justify-self: start;
 }
+
 
 .main-content section {
   position: relative;
@@ -35,9 +65,11 @@
   scroll-margin-top: 4rem;
 }
 
+
 .main-content section:not(:first-child) {
   padding-top: 2rem;
 }
+
 
 .main-content section:not(:last-child)::after {
   content: "";
@@ -56,23 +88,31 @@
   );
 }
 
+
 .main-content h2 {
   margin-bottom: 2rem;
 }
 
+
 .main-content p {
-  max-width: 70ch;
+  max-width: 170ch;
 }
 
-@media (max-width: 1100px) {
+
+/* ---------------- Medium desktop / laptop ---------------- */
+
+@media (max-width: 1300px) {
   .app-layout {
     grid-template-columns:
       minmax(0, 1fr)
-      180px;
+      320px;
 
     gap: 3rem;
   }
 }
+
+
+/* ---------------- Tablet ---------------- */
 
 @media (max-width: 900px) {
   .app-layout {
@@ -86,9 +126,14 @@
   }
 
   .main-content {
+    max-width: none;
+
     gap: 5rem;
   }
 }
+
+
+/* ---------------- Mobile ---------------- */
 
 @media (max-width: 600px) {
   .app-layout {

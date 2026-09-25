@@ -1,18 +1,31 @@
 .navbar {
   position: sticky;
+
   top: 50vh;
   transform: translateY(-50%);
 
   align-self: start;
-  height: fit-content;
+
+  /*
+    Force the navbar to occupy its own grid column
+    and align toward the right side of that column.
+  */
+  justify-self: end;
 
   width: 100%;
-  max-width: 220px;
+  max-width: 360px;
 
-  padding: clamp(1rem, 2vw, 1.5rem);
+  height: fit-content;
+
+  padding:
+    clamp(1rem, 2vw, 1.5rem)
+    clamp(1rem, 2vw, 1.5rem);
 
   border-left: 1px solid #333;
 }
+
+
+/* ---------------- Main navigation ---------------- */
 
 .navbar > ul {
   display: flex;
@@ -20,38 +33,67 @@
 
   gap: clamp(0.75rem, 1.5vh, 1.25rem);
 
+  width: 100%;
+
   list-style: none;
+
   margin: 0;
   padding: 0;
 }
+
 
 .navbar li {
   list-style: none;
 }
 
+
 .navbar a,
 .navbar button {
   color: inherit;
+
   font: inherit;
+
   text-decoration: none;
+
+  /*
+    Keep every navigation entry on one line.
+  */
+  white-space: nowrap;
 }
+
+
+/* ---------------- Buttons ---------------- */
 
 .navbar button {
   padding: 0;
 
   border: none;
+
   background: none;
 
   cursor: pointer;
+
+  text-align: left;
 }
 
+
+/* ---------------- Submenu ---------------- */
+
 .nav-submenu {
+  width: 100%;
+
   max-height: 0;
 
   margin: 0;
-  padding-left: 1.75rem;
+
+  /*
+    Slight indentation without wasting
+    too much horizontal space.
+  */
+  padding-left: 1.5rem;
 
   opacity: 0;
+
   overflow: hidden;
 
   transform: translateX(-0.5rem);
@@ -63,6 +105,7 @@
     margin-top 0.35s ease;
 }
 
+
 .nav-submenu.open {
   max-height: 300px;
 
@@ -73,6 +116,9 @@
   transform: translateX(0);
 }
 
+
+/* ---------------- Tablet / mobile ---------------- */
+
 @media (max-width: 900px) {
   .navbar {
     position: static;
@@ -80,6 +126,9 @@
     top: auto;
     transform: none;
 
+    justify-self: stretch;
+
+    width: 100%;
     max-width: none;
 
     padding: 1rem 0;
@@ -88,12 +137,15 @@
     border-bottom: 1px solid #333;
   }
 
+
   .navbar > ul {
     flex-direction: row;
+
     flex-wrap: wrap;
 
     gap: 1rem;
   }
+
 
   .nav-submenu {
     padding-left: 1rem;

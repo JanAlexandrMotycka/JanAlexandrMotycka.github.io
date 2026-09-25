@@ -12,6 +12,21 @@ function Navbar() {
     <nav className="navbar">
       <ul>
         <li><a href="#hero">Home</a></li>
+        <li><a href="#school">Education</a></li>
+
+        <li>
+          <button onClick={() => setExperienceOpen(!experienceOpen)}>
+            Experience
+          </button>
+
+          <ul className={`nav-submenu ${experienceOpen ? 'open' : ''}`}>
+            {work.map(job => (
+              <li key={job.id}>
+                <a href={`#${job.id}`}>{job.title}</a>
+              </li>
+            ))}
+          </ul>
+        </li>
 
         <li>
           <button onClick={() => setProjectsOpen(!projectsOpen)}>
@@ -28,22 +43,6 @@ function Navbar() {
         </li>
 
         <li><a href="#skills">Skills</a></li>
-
-        <li>
-          <button onClick={() => setExperienceOpen(!experienceOpen)}>
-            Experience
-          </button>
-
-          <ul className={`nav-submenu ${experienceOpen ? 'open' : ''}`}>
-            {work.map(job => (
-              <li key={job.id}>
-                <a href={`#${job.id}`}>{job.title}</a>
-              </li>
-            ))}
-          </ul>
-        </li>
-
-        <li><a href="#school">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>

@@ -9,13 +9,13 @@ function Projects() {
 
             <h2>Projects</h2>
 
-            <div className="project-grid">
-                {projects.map(project => (
-                    <ProjectCard
-                        key={project.id}
-                        project={project}
-                    />
-                ))}
+            <div className="projects-list">
+            {projects.map(project => (
+                <ProjectCard
+                key={project.id}
+                project={project}
+                />
+            ))}
             </div>
 
         </section>
